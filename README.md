@@ -7,6 +7,11 @@ A simple full-stack web application that displays a list of products in card for
 - **Frontend**: React, Material UI, Axios  
 - **Backend**: Node.js, Express.js
 
+## 🖥️ Demo
+![螢幕錄影+2025-04-08+晚上11 57 42 (2)](https://github.com/user-attachments/assets/d3783a2c-5323-459f-88a2-cd086e938272)
+![Uploading 截圖 2025-04-08 晚上11.58.55.png…]()
+
+
 ## 🚀 Features
 
 ### ✅ Frontend
