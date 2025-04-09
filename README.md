@@ -42,7 +42,7 @@ cd product-showcase
 
 ### 2. Run the Backend
 ```bash
-cd backend
+cd StarterCode/backend
 npm install
 node index.js
 ```
@@ -50,7 +50,7 @@ By default, the backend runs on http://localhost:5000
 
 ### 3. Run the Frontend
 ```bash
-cd ../frontend
+cd StarterCode/frontend
 npm install
 npm start
 ```
