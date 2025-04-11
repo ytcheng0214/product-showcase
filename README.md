@@ -45,14 +45,16 @@ By default, the backend runs on http://localhost:5001.
 If you want to change the port (e.g., to 5002), follow the steps below before starting the backend or frontend:
 
 🛠 Modify the Backend Port
-Create or edit .env inside StarterCode/backend/:
+
+Edit `.env` inside `StarterCode/backend/`:
 
 ```ini
 PORT=5002
 ```
 
 🔁 Update the Frontend Proxy
-Open StarterCode/frontend/package.json and update the proxy field:
+
+Open `StarterCode/frontend/package.json` and update the proxy field:
 
 ```json
 "proxy": "http://localhost:5002"
@@ -74,4 +76,4 @@ npm install
 npm start
 ```
 The frontend runs on http://localhost:3000
-> Make sure the backend server is running before you open the frontend.
+> ⚠️ Make sure the backend server is running before you open the frontend.
