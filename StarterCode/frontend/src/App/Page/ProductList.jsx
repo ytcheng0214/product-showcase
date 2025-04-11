@@ -6,10 +6,16 @@ import DeleteIcon from '@mui/icons-material/Delete';
 const ProductList = () => {
   const [itemList, setItemList] = useState([]);
 
+  // const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+  // const baseURL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}/api`;
+
   //implement the get products function
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      // const res = await axios.get("http://localhost:5000/api/products");
+      // const res = await axios.get(`${API_BASE_URL}/api/products`);
+      // const res = await axios.get(`${baseURL}/products`);
+      const res = await axios.get('/api/products');
       setItemList(res.data);
     } catch (err) {
       console.error("Error fetching products:", err);
@@ -19,7 +25,10 @@ const ProductList = () => {
   //implement the delete function
   const handleDelete = async (productId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${productId}`);
+      // await axios.delete(`http://localhost:5000/api/products/${productId}`);
+      await axios.delete(`/api/products/${productId}`);
+      // await axios.delete(`${API_BASE_URL}/api/products/${productId}`);
+      // await axios.delete(`${baseURL}/products/${productId}`);
       setItemList((prevItems) =>
         prevItems.filter((item) => item.id !== productId)
       );
