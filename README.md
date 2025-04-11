@@ -40,7 +40,25 @@ git clone https://github.com/ytcheng0214/product-showcase.git
 cd product-showcase
 ```
 
-### 2. Run the Backend
+### 2. (Optional) Change the Default Port (5001)
+By default, the backend runs on http://localhost:5001.
+If you want to change the port (e.g., to 5002), follow the steps below before starting the backend or frontend:
+
+🛠 Modify the Backend Port
+Create or edit .env inside StarterCode/backend/:
+
+```ini
+PORT=5002
+```
+
+🔁 Update the Frontend Proxy
+Open StarterCode/frontend/package.json and update the proxy field:
+
+```json
+"proxy": "http://localhost:5002"
+```
+
+### 3. Run the Backend
 ```bash
 cd StarterCode/backend
 npm install
@@ -48,15 +66,8 @@ node index.js
 ```
 By default, the backend runs on http://localhost:5001.
 
-> If you want to run the backend on a different port, you can set the PORT variable in a .env file inside StarterCode/backend/.
 
-Example:
-
-```ini
-PORT=5002
-```
-
-### 3. Run the Frontend
+### 4. Run the Frontend
 ```bash
 cd StarterCode/frontend
 npm install
@@ -64,11 +75,3 @@ npm start
 ```
 The frontend runs on http://localhost:3000
 > Make sure the backend server is running before you open the frontend.
-> ✅ The frontend is configured with a proxy in StarterCode/frontend/package.json, so you don’t need to hardcode the backend URL.
-> ⚠️ Make sure to update the proxy field in StarterCode/frontend/package.json if the backend is not using port 5001.
-
-Example:
-
-```json
-"proxy": "http://localhost:5002"
-```
